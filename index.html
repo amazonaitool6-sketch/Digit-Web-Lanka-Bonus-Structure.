@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Distribution System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .formula {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 2px solid #667eea;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
+        .example {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .example h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .platform-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .platform-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .platform-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .platform-name {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 1.2em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .key-point {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 DigitWeb Lanka Bonus Distribution System</h1>
+            <p>Performance-Based Revenue Sharing Model</p>
+            <p style="font-size: 0.95em; margin-top: 15px; opacity: 0.95;">Amazon | Shopify | eBay | Wayfair | B & Q</p>
+        </div>
+        
+        <div class="content">
+            <!-- Overview -->
+            <div class="section">
+                <h2>📋 Overview</h2>
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    The company distributes <span class="highlight">1.5% of total revenue</span> as bonus to all employees. 
+                    This is a <strong>performance-based system</strong>, meaning employees who contribute more sales receive proportionally higher bonuses.
+                </p>
+                <div class="platform-list" style="margin-top: 20px;">
+                    <div class="platform-item">
+                        <div class="platform-name">🛒 Amazon</div>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-name">🛍️ Shopify</div>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-name">📦 eBay</div>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-name">🏠 Wayfair</div>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-name">🏗️ B & Q</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 1 -->
+            <div class="section">
+                <h2><span class="step-number">1</span> Total Revenue Collection</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1em;">Collect total revenue from all platforms:</p>
+                <div class="formula">
+                    Total Company Revenue = Amazon + Shopify + eBay + Wayfair + B & Q Revenue
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="section">
+                <h2><span class="step-number">2</span> Calculate Total Bonus Pool</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1em;">Calculate 1.5% of total company revenue as the bonus pool:</p>
+                <div class="formula">
+                    Total Bonus Amount = Total Company Revenue × 1.5%
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="section">
+                <h2><span class="step-number">3</span> Department-wise Bonus Split</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1em;">Distribute bonus to each department proportional to their revenue contribution:</p>
+                <div class="formula">
+                    Department Bonus = (Department Revenue / Total Revenue) × Total Bonus
+                </div>
+                <ul style="margin-top: 20px;">
+                    <li><strong>Amazon Bonus</strong> = (Amazon Revenue / Total Revenue) × Total Bonus</li>
+                    <li><strong>Shopify Bonus</strong> = (Shopify Revenue / Total Revenue) × Total Bonus</li>
+                    <li><strong>eBay Bonus</strong> = (eBay Revenue / Total Revenue) × Total Bonus</li>
+                    <li><strong>Wayfair Bonus</strong> = (Wayfair Revenue / Total Revenue) × Total Bonus</li>
+                    <li><strong>B & Q Bonus</strong> = (B & Q Revenue / Total Revenue) × Total Bonus</li>
+                </ul>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="section">
+                <h2><span class="step-number">4</span> Individual Employee Distribution</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1em;">
+                    <strong>⚠️ Important:</strong> Department bonus is NOT divided equally among employees. 
+                    Each employee receives bonus based on their <span class="highlight">individual sales contribution percentage</span>.
+                </p>
+                
+                <h3 style="color: #1e3c72; margin: 25px 0 15px 0;">📊 Calculation Method:</h3>
+                
+                <div class="formula">
+                    Employee Contribution % = (Employee Sales / Department Total Sales) × 100
+                </div>
+                
+                <div class="formula" style="margin-top: 10px;">
+                    Employee Bonus = Department Bonus × Employee Contribution %
+                </div>
+            </div>
+            
+            <!-- Example -->
+            <div class="example">
+                <h3>💡 Detailed Example - Amazon Department</h3>
+                
+                <h4 style="margin-top: 20px; color: #856404;">Company Level:</h4>
+                <table>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Revenue</th>
+                        <th>Contribution %</th>
+                    </tr>
+                    <tr>
+                        <td>Amazon</td>
+                        <td>₹60,00,000</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>Shopify</td>
+                        <td>₹20,00,000</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>eBay</td>
+                        <td>₹15,00,000</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Wayfair</td>
+                        <td>₹4,00,000</td>
+                        <td>4%</td>
+                    </tr>
+                    <tr>
+                        <td>B & Q</td>
+                        <td>₹1,00,000</td>
+                        <td>1%</td>
+                    </tr>
+                    <tr style="background: #fff3cd; font-weight: bold;">
+                        <td>Total</td>
+                        <td>₹1,00,00,000</td>
+                        <td>100%</td>
+                    </tr>
+                </table>
+                
+                <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 10px;">
+                    <strong>Total Bonus Pool:</strong> ₹1,00,00,000 × 1.5% = <span style="color: #28a745; font-size: 1.3em;">₹1,50,000</span>
+                </div>
+                
+                <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 10px;">
+                    <strong>Amazon Department Bonus:</strong> ₹1,50,000 × 60% = <span style="color: #28a745; font-size: 1.3em;">₹90,000</span>
+                </div>
+                
+                <h4 style="margin-top: 30px; color: #856404;">Amazon Department - Individual Distribution (20 Employees):</h4>
+                <table>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Individual Sales</th>
+                        <th>Contribution %</th>
+                        <th>Bonus Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Employee A</td>
+                        <td>₹10,00,000</td>
+                        <td>16.67%</td>
+                        <td style="color: #28a745; font-weight: bold;">₹15,003</td>
+                    </tr>
+                    <tr>
+                        <td>Employee B</td>
+                        <td>₹8,00,000</td>
+                        <td>13.33%</td>
+                        <td style="color: #28a745; font-weight: bold;">₹11,997</td>
+                    </tr>
+                    <tr>
+                        <td>Employee C</td>
+                        <td>₹5,00,000</td>
+                        <td>8.33%</td>
+                        <td style="color: #28a745; font-weight: bold;">₹7,497</td>
+                    </tr>
+                    <tr>
+                        <td>Employee D</td>
+                        <td>₹4,00,000</td>
+                        <td>6.67%</td>
+                        <td style="color: #28a745; font-weight: bold;">₹6,003</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center; font-style: italic;">... (remaining 16 employees)</td>
+                    </tr>
+                    <tr style="background: #fff3cd; font-weight: bold;">
+                        <td>Total (20 employees)</td>
+                        <td>₹60,00,000</td>
+                        <td>100%</td>
+                        <td style="color: #28a745;">₹90,000</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Key Points -->
+            <div class="key-point">
+                <h4>✅ Key Benefits of This System:</h4>
+                <ul>
+                    <li><strong>Fair & Transparent:</strong> Higher contributors receive proportionally higher bonuses</li>
+                    <li><strong>Performance-Driven:</strong> Motivates employees to increase sales performance</li>
+                    <li><strong>Department-wise Recognition:</strong> Each platform's contribution is properly recognized</li>
+                    <li><strong>Individual Recognition:</strong> Personal effort receives appropriate credit</li>
+                    <li><strong>Easy to Calculate:</strong> Clear formula eliminates confusion</li>
+                </ul>
+            </div>
+            
+            <!-- Implementation -->
+            <div class="section">
+                <h2>🔧 Implementation Steps</h2>
+                <ol style="line-height: 2; font-size: 1.1em;">
+                    <li>Collect monthly/quarterly revenue data from all platforms</li>
+                    <li>Track each employee's individual sales data</li>
+                    <li>Apply formulas and perform calculations</li>
+                    <li>Verify results (totals must match)</li>
+                    <li>Share results transparently with employees</li>
+                    <li>Process bonus payments</li>
+                </ol>
+            </div>
+            
+            <!-- Formula Summary -->
+            <div class="section" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);">
+                <h2>📐 Quick Formula Reference</h2>
+                <div class="formula">1. Total Bonus = Total Revenue × 1.5%</div>
+                <div class="formula">2. Department Bonus = (Dept Revenue / Total Revenue) × Total Bonus</div>
+                <div class="formula">3. Employee % = (Employee Sales / Dept Sales) × 100</div>
+                <div class="formula">4. Employee Bonus = Department Bonus × Employee %</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>DigitWeb Lanka Bonus Distribution System</strong></p>
+            <p style="margin-top: 10px; opacity: 0.9;">Performance-Based | Fair | Transparent</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">© DigitWeb Lanka Policy Document | All Platforms: Amazon, Shopify, eBay, Wayfair, B & Q</p>
+        </div>
+    </div>
+</body>
+</html>
